@@ -1,6 +1,5 @@
 const { createServer, build: viteBuild } = require('vite')
 const vue = require('@vitejs/plugin-vue')
-
 const argv = require('optimist').argv
 
 const root = process.cwd()
