@@ -1,0 +1,27 @@
+{
+  "name": "vite-vue-electron",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "node ./scripts/build.js",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.29.1",
+    "@typescript-eslint/parser": "^4.29.1",
+    "@vitejs/plugin-vue": "^1.3.0",
+    "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^7.16.0",
+    "optimist": "^0.6.1",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.4",
+    "vue": "^3.2.2",
+    "vue-tsc": "^0.2.2"
+  }
+}
