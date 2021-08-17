@@ -1,6 +1,9 @@
 <template>
   <h1>{{ msg }}</h1>
 
+  <div><a>sdfs</a><a>asdf></a></div>
+
+<div><a href="sdfs"></a></div>
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
@@ -46,6 +49,7 @@ export default defineComponent({
   },
   setup: () => {
     const count = ref(0)
+
     return { count }
   }
 })

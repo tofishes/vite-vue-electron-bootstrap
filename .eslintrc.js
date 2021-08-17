@@ -12,6 +12,7 @@ module.exports = {
   },
   plugins: ['vue', '@typescript-eslint'],
   rules: {
+    'vue/no-multiple-template-root': 'off',
     // 'prettier/prettier': 'error',
     camelcase: 'off', // ['error', { properties: 'never', ignoreDestructuring: true }]
     'react/prop-types': 'off',

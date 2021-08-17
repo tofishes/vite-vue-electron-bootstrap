@@ -1,0 +1,6 @@
+dist
+node_modules
+node-test
+uptool
+*.d.ts
+.prettierrc.js
