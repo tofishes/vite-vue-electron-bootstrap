@@ -2,13 +2,13 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    node: true
+    node: true,
   },
-  extends: ['plugin:vue/essential', 'standard', 'prettier'],
+  extends: ['plugin:vue/essential', 'standard', '@vue/prettier', 'prettier'],
   parserOptions: {
     ecmaVersion: 12,
     parser: '@typescript-eslint/parser',
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['vue', '@typescript-eslint'],
   rules: {
@@ -34,10 +34,10 @@ module.exports = {
           'sibling',
           // ['parent', 'sibling'], // Then sibling and parent types. They can be mingled together
           'index', // Then the index file
-          'object' // Then the rest: internal and external type
+          'object', // Then the rest: internal and external type
         ],
-        'newlines-between': 'always'
-      }
+        'newlines-between': 'always',
+      },
     ],
     'padding-line-between-statements': [
       // 块级前后加空行，表达式前后加空行
@@ -47,8 +47,8 @@ module.exports = {
       { blankLine: 'always', prev: 'expression', next: '*' },
       { blankLine: 'always', prev: '*', next: 'expression' },
       { blankLine: 'always', prev: '*', next: 'return' },
-      { blankLine: 'always', prev: 'import', next: 'expression' }
+      { blankLine: 'always', prev: 'import', next: 'expression' },
     ],
-    'no-else-return': ['error', { allowElseIf: false }] // if return 则去掉else
-  }
+    'no-else-return': ['error', { allowElseIf: false }], // if return 则去掉else
+  },
 }
