@@ -6,6 +6,7 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview"
   },
+  "types": "./typings/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@starptech/prettyhtml": "^0.10.0",
