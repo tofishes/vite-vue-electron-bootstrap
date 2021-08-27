@@ -1,3 +1,5 @@
+import { screen } from 'electron'
+
 import CommonWindow from './common-window'
 import { WINDOW_TAG } from '../libs/constants'
 import _global from './global'
@@ -11,10 +13,12 @@ function initWindow() {
     return mainWin
   }
 
+  const { width, height } = screen.getPrimaryDisplay().workAreaSize
+
   mainWin = CommonWindow('/home', {
     tag: WINDOW_TAG.MAIN,
-    // width,
-    // height
+    width: width * 0.8,
+    height: height * 0.8,
   })
   // 在webContents完成page loaded之前就要调用updater,
   // 因为updater注册了ipc事件
