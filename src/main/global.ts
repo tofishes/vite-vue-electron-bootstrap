@@ -1,15 +1,7 @@
 import { app, BrowserWindow } from 'electron'
 
-declare global {
-  namespace NodeJS {
-    interface Global {
-      getWindow(tag: string): BrowserWindow | null
-      registerWindow(tag: string, windowId: number): void
-      getFocusedWindow(): BrowserWindow | null
-      quit(): void
-    }
-  }
-}
+import '../../typings/index.d'
+
 type WIN_MAP = {
   [key: string]: number
 }
