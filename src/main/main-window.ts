@@ -1,7 +1,8 @@
 import { screen } from 'electron'
 
-import CommonWindow from './common-window'
 import { WINDOW_TAG } from '../libs/constants'
+
+import CommonWindow from './common-window'
 import _global from './global'
 // import initUpdater from './init/updater'
 
@@ -10,6 +11,7 @@ function initWindow() {
 
   if (mainWin) {
     mainWin.focus()
+
     return mainWin
   }
 

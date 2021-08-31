@@ -1,5 +1,5 @@
-import CommonWindow from './common-window'
 import { WINDOW_TAG } from '../libs/constants'
+import CommonWindow from './common-window'
 
 async function initWindow() {
   const window = CommonWindow('/login', {

@@ -19,23 +19,31 @@ function init(window: BrowserWindow) {
       is_force: isForce,
       file_hash: hash,
       exe_url: url,
-      latest_auto_update_version_no: latestForceVersion
+      latest_auto_update_version_no: latestForceVersion,
     } = resp
 
     return {
-      version, description, isForce, hash, url, latestForceVersion
+      version,
+      description,
+      isForce,
+      hash,
+      url,
+      latestForceVersion,
     }
   })
 
-  ipcMain.once(CHANNEL_UPDATE.CONFIRM, () => {
-    autoUpdater.quitAndInstall()
+  ipcMain
+    .once(CHANNEL_UPDATE.CONFIRM, () => {
+      autoUpdater.quitAndInstall()
 
-    _global.quit()
-  }).on(CHANNEL_UPDATE.DOWNLOAD, () => {
-    autoUpdater.downloadUpdate()
-  }).handle(CHANNEL_UPDATE.CHECK, async () => {
-    await autoUpdater.checkForUpdates()
-  })
+      _global.quit()
+    })
+    .on(CHANNEL_UPDATE.DOWNLOAD, () => {
+      autoUpdater.downloadUpdate()
+    })
+    .handle(CHANNEL_UPDATE.CHECK, async () => {
+      await autoUpdater.checkForUpdates()
+    })
 
   autoUpdater
     .on(CHANNEL_UPDATE.ABLE, info => {

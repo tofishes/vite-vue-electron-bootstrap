@@ -16,8 +16,6 @@ function initApp() {
     return
   }
 
-  let tray: Tray
-
   app.on('second-instance', () => {
     const activeWindow = BrowserWindow.getAllWindows()[0]
 
@@ -50,7 +48,7 @@ function initApp() {
   app.whenReady().then(async () => {
     await getMainWindow()
 
-    tray = initTray()
+    initTray()
   })
 }
 

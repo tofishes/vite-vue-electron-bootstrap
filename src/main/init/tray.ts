@@ -24,18 +24,20 @@ function init() {
       label: `打开${title}`,
       click() {
         toggleWindow(true)
-      }
+      },
     },
     {
       label: `退出${title}`,
       click() {
         _global.quit()
-      }
-    }
+      },
+    },
   ])
 
   tray.setToolTip(title)
+
   tray.setContextMenu(contextMenu)
+
   tray.on('click', () => {
     toggleWindow()
   })

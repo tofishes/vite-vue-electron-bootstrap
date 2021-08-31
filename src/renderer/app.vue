@@ -1,9 +1,13 @@
 <template>
   <img
     title="sldjfsljfdldsjflsjflksjfo圣诞快乐分解聚隆科技否为实力坑爹福建省连看都"
-    alt="Vue logo" src="./assets/logo.png"
+    alt="Vue logo"
+    src="./assets/logo.png"
   />
-  <div><a href="sdf">sdlfj</a></div>
+  <div>
+    <a href="sdf">sdlfj</a>
+  </div>
+
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 </template>
 

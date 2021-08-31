@@ -4,22 +4,20 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['plugin:vue/essential', 'standard', '@vue/prettier', 'prettier'],
+  extends: ['plugin:vue/vue3-recommended', 'standard', 'plugin:prettier/recommended'],
   parserOptions: {
     ecmaVersion: 12,
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
-  plugins: ['vue', '@typescript-eslint'],
+  plugins: ['vue', '@typescript-eslint', 'prettier'],
   rules: {
     'vue/no-multiple-template-root': 'off',
-    // 'prettier/prettier': 'error',
+    'prettier/prettier': 'error',
     camelcase: 'off', // ['error', { properties: 'never', ignoreDestructuring: true }]
-    'react/prop-types': 'off',
-    'react/display-name': 'off',
     'array-callback-return': 'off',
     'no-unused-vars': 'warn',
-    'space-before-function-paren': 'off',
+    // 'space-before-function-paren': 'off',
     'no-use-before-define': 'off',
     // 'max-len': ['error', { code: 80 }],
     // 'array-element-newline': ['error', 'never'], // 和prettier产生冲突
@@ -48,6 +46,7 @@ module.exports = {
       { blankLine: 'always', prev: '*', next: 'expression' },
       { blankLine: 'always', prev: '*', next: 'return' },
       { blankLine: 'always', prev: 'import', next: 'expression' },
+      { blankLine: 'always', prev: '*', next: 'export' },
     ],
     'no-else-return': ['error', { allowElseIf: false }], // if return 则去掉else
   },
