@@ -1,20 +1,13 @@
 <template>
-  <img
-    title="sldjfsljfdldsjflsjflksjfo圣诞快乐分解聚隆科技否为实力坑爹福建省连看都"
-    alt="Vue logo"
-    src="./assets/logo.png"
-  />
-  <div>
-    <a href="sdf">sdlfj</a>
-  </div>
+  <img alt="Vue logo" src="../assets/logo.png" />
 
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Electron" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './hello.vue'
 
 export default defineComponent({
   name: 'App',

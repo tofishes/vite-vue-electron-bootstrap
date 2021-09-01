@@ -1,22 +1,15 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
-import App from './app.vue'
+import Layout from './pages/layout.vue'
+import routes from './routes'
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: [],
+  routes,
 })
 
-const a = () => {
-  if ([]) {
-    return true
-  }
-
-  return false
-}
-
-const app = createApp(App)
+const app = createApp(Layout)
 
 app.use(router)
 
