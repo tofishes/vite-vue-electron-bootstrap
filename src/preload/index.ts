@@ -19,7 +19,7 @@ const api = {
     },
     showSaveDialog(...options: any[]) {
       return ipcRenderer.invoke('dialog:showSaveDialog', ...options)
-    }
+    },
   } as Pick<
     Dialog,
     | 'showCertificateTrustDialog'
@@ -27,13 +27,15 @@ const api = {
     | 'showMessageBox'
     | 'showOpenDialog'
     | 'showSaveDialog'
-  >
+  >,
 }
 // fix lost these prototype methods in renderer
 const { on, once } = ipcRenderer
+
 api.ipcRenderer.on = (...args) => {
   return on.apply(ipcRenderer, args)
 }
+
 api.ipcRenderer.once = (...args) => {
   return once.apply(ipcRenderer, args)
 }
@@ -42,5 +44,6 @@ try {
   contextBridge.exposeInMainWorld('electron', api)
 } catch (e) {
   console.log(e)
+  // eslint-disable-next-line padding-line-between-statements
   ;(window as any).electron = api
 }
