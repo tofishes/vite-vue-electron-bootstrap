@@ -2,18 +2,15 @@
   <img alt="Vue logo" src="../assets/logo.png" />
 
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Electron" />
+  <el-button>I am ElButton</el-button>
+  <n-button type="primary">Primary</n-button>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import HelloWorld from './hello.vue'
-
 export default defineComponent({
   name: 'App',
-  components: {
-    HelloWorld,
-  },
 })
 </script>
 
@@ -21,7 +18,6 @@ export default defineComponent({
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;

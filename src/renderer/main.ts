@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
-import Layout from './pages/layout.vue'
+import Layout from './layout.vue'
 import routes from './routes'
 
 const router = createRouter({
