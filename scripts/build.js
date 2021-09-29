@@ -1,9 +1,11 @@
 const fs = require('fs')
+
 const esbuild = require('esbuild')
 const electron = require('electron-connect').server.create({ stopOnClose: true })
-
 const { createServer, build: viteBuild } = require('vite')
 const vue = require('@vitejs/plugin-vue')
+const Components = require('unplugin-vue-components/vite')
+const { NaiveUiResolver } = require('unplugin-vue-components/resolvers')
 const argv = require('optimist').argv
 
 const debounce = require('./debounce')
@@ -16,7 +18,14 @@ const define = {
   'process.env.PACKAGED': isPackaged,
 }
 const viteCogfig = {
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    Components({
+      dirs: ['./'],
+      resolvers: [NaiveUiResolver()],
+      dts: true,
+    }),
+  ],
   root: `${root}/src/renderer`,
   base: './',
   publicDir: false,

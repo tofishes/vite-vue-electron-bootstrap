@@ -4,3 +4,4 @@ dist
 dist-ssr
 *.local
 pnpm-lock.yaml
+src/renderer/components.d.ts
