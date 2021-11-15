@@ -1,9 +1,16 @@
 <template>
-  <img alt="Vue logo" src="../assets/logo.png" />
+  <div class="wapper">
+    <header>
+      <n-button-group>
+        <n-button round>添加本地项目</n-button>
+        <n-button round>添加Git</n-button>
+      </n-button-group>
+    </header>
 
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Electron" />
-  <el-button>I am ElButton</el-button>
-  <n-button type="primary">Primary</n-button>
+    <main>
+      <n-table title="项目列表"> </n-table>
+    </main>
+  </div>
 </template>
 
 <script lang="ts">
@@ -15,10 +22,11 @@ export default defineComponent({
 </script>
 
 <style lang="stylus">
-#app
+body
   font-family Avenir, Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased
-  text-align center
   color #2c3e50
-  margin-top 60px
+
+.wapper
+  padding 30px
 </style>
